@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Inicio</a> | <a href="/purchase">Compra</a> | <a href="/status">Estado</a>
+    </header>
+    <section class="container">
+        
+        {% block content %}{% endblock %}
+    </section>
+    <footer>@copy 2020 Todos los derechos reservados</footer>
+</body>
+</html>

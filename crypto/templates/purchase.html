@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Compra de Criptos{% endblock %}
+
+{% block content %}
+    <h1>Compra de Cryptos</h1>
+    
+    <form action="/purchase", method="POST">
+        <div class="row">
+            <div class="six columns">
+                {{ form.From(class="selector1") }}
+            </div>
+            <div class="six columns">
+                {{ form.To(class="selector2") }}
+            </div>
+            <div class="six columns">
+                {{ form.Q(class="u-full-width") }}
+            </div>
+            <div class="six columns">
+                
+                <input type="text" name="Q" id="cantidad_dada" disabled>
+                <button class="button-primary", id='Calculate', type="submit">Calcular</button>
+                <script language="JavaScript" type="text/JavaScript" src="../static/conectionp.js"></script>
+            </div>
+            
+        </div>
+        <button type="submit", class="button-primary">Borrar Formulario</button>
+        <button class="button-primary", type="submit">Aceptar Compra</button>
+    </form>
+{% endblock %}
